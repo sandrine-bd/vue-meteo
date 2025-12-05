@@ -4,12 +4,13 @@
 
         <p><strong>Description : </strong> {{ weather }}</p>
         <p><strong>Température : </strong> {{ temperature }} °C</p>
-        <p><strong>Dernière mise à jour :</strong> {{ updatedAt.toLocaleString() }}</p>
+        <p><strong>Dernière mise à jour :</strong> {{ format(updatedAt) }}</p>
     </div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
+import { format } from 'timeago.js'
 
 const props = defineProps({
     name: String,
