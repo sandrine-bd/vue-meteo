@@ -2,6 +2,7 @@
   <div>
     <nav>
       <router-link to="/villes">Liste des villes</router-link> 
+      <router-link to="/ville">Ville (temporaire)</router-link>
     </nav>
 
     <!--- Le contenu de la route sélectionnée s'affiche ici-->
