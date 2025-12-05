@@ -6,7 +6,7 @@
     </nav>
 
     <!--- Le contenu de la route sélectionnée s'affiche ici-->
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
