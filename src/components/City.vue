@@ -1,22 +1,25 @@
 <template>
     <div class="city">
-        <h1>Météo - {{ city.name }}</h1>
+        <h1>Météo - {{ name }}</h1>
 
-        <p><strong>Description : </strong> {{ city.weather }}</p>
-        <p><strong>Température : </strong> {{ city.temperature }} °C</p>
-        <p><strong>Dernière mise à jour :</strong> {{ city.updatedAt.toLocaleString() }}</p>
+        <p><strong>Description : </strong> {{ weather }}</p>
+        <p><strong>Température : </strong> {{ temperature }} °C</p>
+        <p><strong>Dernière mise à jour :</strong> {{ updatedAt.toLocaleString() }}</p>
     </div>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { defineProps } from 'vue'
 
-const city = reactive({
-    name: "Ma ville",
-    weather: "Peu nuageux",
-    temperature: 20.55,
-    updatedAt: new Date()
+const props = defineProps({
+    name: String,
+    weather: String,
+    temperature: Number,
+    updatedAt: Date
 })
+
+// Pour simplifier, on utilise la destructuration
+const { name, weather, temperature, updatedAt } = props
 </script>
 
 <style scoped>
