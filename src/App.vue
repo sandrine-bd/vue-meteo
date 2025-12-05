@@ -1,20 +1,24 @@
-<script setup>
-import CitiesList from './views/CitiesList.vue';
-</script>
-
 <template>
-  <main class="home">
-    <CitiesList />
-  </main>
+  <div>
+    <nav>
+      <router-link to="/villes">Liste des villes</router-link> 
+    </nav>
+
+    <!--- Le contenu de la route sélectionnée s'affiche ici-->
+    <router-view></router-view>
+  </div>
 </template>
 
+<script setup>
+</script>
+
 <style scoped>
-.home {
-  padding: 2rem;
+nav {
+  margin-bottom: 1rem;
 }
-a {
-  color: #42b983;
+
+router-link {
+  margin-right: 1rem;
   cursor: pointer;
-  text-decoration: underline;
 }
 </style>
